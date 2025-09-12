@@ -4,7 +4,7 @@ const products = [
     id: "p1",
     name: "Basic Tee Combed 30s",
     price: 99000,
-    image: "https://images.unsplash.com/photo-1520975692360-17f0a2b5b6c7?q=80&w=1200&auto=format&fit=crop"
+    image: "https://static.zara.net/assets/public/05d6/f64c/6e5c478c8a15/65ea2e03eb80/05584261250-p/05584261250-p.jpg?ts=1727277108008&w=1024"
   },
   {
     id: "p2",
