@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout - BLANK STORE</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container header-wrap">
+      <div class="brand">
+        <div class="brand-logo">BS</div>
+        <div>
+          <h1>BLANK STORE</h1>
+          <p class="tagline">Fashion Harian, Kualitas Premium</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Beranda</a>
+        <a href="index.html#products">Produk</a>
+        <a href="index.html#about">Tentang</a>
+        <a href="index.html#contact">Kontak</a>
+        <button class="cart-btn" id="openCartBtn" aria-label="Buka Keranjang">
+          🛒 <span id="cartCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Checkout -->
+  <section id="checkout" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h3>Data Pemesan & Checkout</h3>
+        <p>Lengkapi data berikut untuk menyelesaikan pesanan Anda</p>
+      </div>
+      
+      <div class="checkout-grid">
+        <div class="checkout-form">
+          <form id="checkoutForm" class="form">
+            <div class="form-row">
+              <label>Nama Lengkap</label>
+              <input type="text" name="name" placeholder="Nama lengkap" required />
+            </div>
+            <div class="form-row">
+              <label>No. HP / WhatsApp</label>
+              <input type="tel" name="phone" placeholder="08xxxxxxxxxx" required />
+            </div>
+            <div class="form-row">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="email@contoh.com" required />
+            </div>
+            <div class="form-row">
+              <label>Alamat Lengkap</label>
+              <textarea name="address" rows="3" placeholder="Jalan, Kelurahan, Kecamatan, Kota, Kode Pos" required></textarea>
+            </div>
+            <div class="form-row">
+              <label>Metode Pembayaran</label>
+              <select name="payment" required>
+                <option value="">Pilih</option>
+                <option value="transfer">Transfer Bank</option>
+                <option value="cod">COD (Bayar di Tempat)</option>
+                <option value="ewallet">E-Wallet</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Bayar Sekarang</button>
+            <p class="help">Dengan menekan "Bayar Sekarang", Anda menyetujui Syarat & Ketentuan kami.</p>
+          </form>
+        </div>
+        
+        <div class="order-summary">
+          <h3>Ringkasan Pesanan</h3>
+          <div id="orderSummary">
+            <!-- Ringkasan akan dirender via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h3>Pertanyaan Umum</h3>
+        <p>Informasi penting seputar produk dan layanan kami</p>
+      </div>
+      
+      <div class="faq-grid">
+        <div class="faq-column">
+          <h4>Ukuran & Bahan</h4>
+          <details open>
+            <summary>Bagaimana cara memilih ukuran yang tepat?</summary>
+            <p>Kami menyediakan panduan ukuran untuk setiap produk. Silakan cek chart ukuran pada detail produk untuk memastikan Anda memilih ukuran yang sesuai.</p>
+          </details>
+          <details>
+            <summary>Bahan apa yang digunakan?</summary>
+            <p>Semua baju menggunakan bahan katun/combed premium 30s yang nyaman, menyerap keringat, dan tahan lama.</p>
+          </details>
+        </div>
+        
+        <div class="faq-column">
+          <h4>Pengiriman</h4>
+          <details>
+            <summary>Berapa lama waktu pengiriman?</summary>
+            <p>Pengiriman seluruh Indonesia via kurir terpercaya. Estimasi 1-4 hari kerja untuk Jabodetabek dan 3-7 hari kerja untuk luar Jabodetabek.</p>
+          </details>
+          <details>
+            <summary>Berapa biaya pengiriman?</summary>
+            <p>Biaya pengiriman bervariasi tergantung lokasi dan kurir. Sistem akan menghitung otomatis biaya pengiriman setelah Anda memasukkan alamat lengkap.</p>
+          </details>
+        </div>
+        
+        <div class="faq-column">
+          <h4>Pembayaran & Retur</h4>
+          <details>
+            <summary>Metode pembayaran apa saja yang diterima?</summary>
+            <p>Kami menerima transfer bank, pembayaran via e-wallet (GoPay, OVO, Dana), serta COD (Cash on Delivery) untuk area tertentu.</p>
+          </details>
+          <details>
+            <summary>Bagaimana kebijakan retur?</summary>
+            <p>Bisa retur dalam 7 hari jika barang cacat/ukuran tidak sesuai (syarat berlaku). Barang harus dalam kondisi belum dicuci dan tag masih terpasang.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> BLANK STORE. All rights reserved.</p>
+      <a href="#" class="back-top">↑ Kembali ke atas</a>
+    </div>
+  </footer>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

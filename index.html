@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BLANK STORE</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container header-wrap">
+      <div class="brand">
+        <div class="brand-logo">BS</div>
+        <div>
+          <h1>BLANK STORE</h1>
+          <p class="tagline">Fashion Harian, Kualitas Premium</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#home">Beranda</a>
+        <a href="#products">Produk</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+        <button class="cart-btn" id="openCartBtn" aria-label="Buka Keranjang">
+          🛒 <span id="cartCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Banner -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h2>Tampil Percaya Diri Setiap Hari</h2>
+        <p>Koleksi baju pilihan untuk gaya kasual hingga semi-formal. Diskon spesial pembelian pertama!</p>
+        <a href="#products" class="btn btn-primary">Belanja Sekarang</a>
+      </div>
+      <div class="hero-image">
+        <img alt="Banner Toko Baju" src="https://www.elfs-shop.com/~img/bannerweb1-99fb0-3073_11643-t3073_108.webp" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Produk -->
+  <section id="products" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h3>Produk Unggulan</h3>
+        <p>Pilih ukuran, atur jumlah, lalu tambahkan ke keranjang.</p>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Produk akan dirender via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="about" class="section">
+    <div class="container grid-2">
+      <div>
+        <h3>Tentang BLANK STORE</h3>
+        <p>Kami berkomitmen menghadirkan pakaian nyaman, tahan lama, dan ramah dompet. Diproduksi dengan standar kualitas ketat dan desain timeless.</p>
+        <ul class="checks">
+          <li>Kualitas premium & jahitan rapi</li>
+          <li>Harga transparan tanpa biaya tersembunyi</li>
+          <li>Dukungan pelanggan responsif</li>
+        </ul>
+      </div>
+      <div class="about-media">
+        <img alt="Tentang Toko" src="https://www.elfs-shop.com/~img/bannerweb1-99fb0-3073_11643-t3073_108.webp" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact" class="section alt">
+    <div class="container grid-2">
+      <div>
+        <h3>Hubungi Kami</h3>
+        <p>Butuh bantuan? Tinggalkan pesan, kami akan segera balas.</p>
+        <form class="form" id="contactForm">
+          <div class="form-row">
+            <label>Nama</label>
+            <input type="text" name="cname" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" name="cemail" required />
+          </div>
+          <div class="form-row">
+            <label>Pesan</label>
+            <textarea name="cmsg" rows="3" required></textarea>
+          </div>
+          <button class="btn">Kirim Pesan</button>
+        </form>
+      </div>
+      <div>
+        <h4>Informasi Toko</h4>
+        <ul class="info">
+          <li>📍 Jakarta, Indonesia</li>
+          <li>📞 021-1234567</li>
+          <li>✉️ support@blankstore.id</li>
+          <li>
+            <a href="#" aria-label="Instagram">Instagram</a> ·
+            <a href="#" aria-label="Facebook">Facebook</a> ·
+            <a href="#" aria-label="TikTok">TikTok</a>
+          </li>
+        </ul>
+        <div class="map-placeholder">Peta Lokasi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> BLANK STORE. All rights reserved.</p>
+      <a href="#home" class="back-top">↑ Kembali ke atas</a>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h3>Keranjang</h3>
+        <button id="closeCartBtn" class="icon-btn" aria-label="Tutup">✕</button>
+      </div>
+      <div id="cartItems" class="cart-items">
+        <!-- Item keranjang via JS -->
+      </div>
+      <div class="cart-footer">
+        <div class="row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">Rp0</strong>
+        </div>
+        <div class="row muted">Belum termasuk ongkir & pajak.</div>
+        <a href="checkout.html" id="goCheckoutBtn" class="btn btn-primary btn-full">Checkout</a>
+      </div>
+    </div>
+    <div class="cart-backdrop" id="cartBackdrop"></div>
+  </div>
+
+  <!-- Templates (hidden) -->
+  <template id="productCardTpl">
+    <div class="card product-card">
+      <div class="product-media">
+        <img alt="" />
+        <span class="badge">Baru</span>
+      </div>
+      <div class="product-body">
+        <h4 class="product-name"></h4>
+        <p class="product-price"></p>
+        <div class="product-meta">
+          <div class="sizes">
+            <label>Ukuran</label>
+            <select class="size-select">
+              <option value="S">S</option>
+              <option value="M" selected>M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </div>
+          <div class="qty">
+            <label>Jumlah</label>
+            <div class="qty-ctrl">
+              <button class="qty-btn" data-delta="-1" type="button">–</button>
+              <input class="qty-input" type="number" min="1" value="1" />
+              <button class="qty-btn" data-delta="1" type="button">+</button>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary add-to-cart">Tambah ke Keranjang</button>
+      </div>
+    </div>
+  </template>
+
+  <template id="cartItemTpl">
+    <div class="cart-item">
+      <img alt="" class="ci-img" />
+      <div class="ci-info">
+        <div class="ci-title"></div>
+        <div class="ci-meta"></div>
+        <div class="ci-price"></div>
+        <div class="qty-ctrl small">
+          <button class="qty-btn" data-delta="-1" type="button">–</button>
+          <input class="qty-input" type="number" min="1" value="1" />
+          <button class="qty-btn" data-delta="1" type="button">+</button>
+        </div>
+      </div>
+      <button class="icon-btn ci-remove" aria-label="Hapus">🗑️</button>
+    </div>
+  </template>
+
+<script src="script.js"></script>
+
+</body>
+</html>
