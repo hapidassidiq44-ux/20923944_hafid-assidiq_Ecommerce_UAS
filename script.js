@@ -16,7 +16,7 @@ const products = [
     id: "p3",
     name: "Hoodie Zip Minimal",
     price: 239000,
-    image: "https://images.unsplash.com/photo-1520974722057-9e6a8435b1f2?q=80&w=1200&auto=format&fit=crop"
+    image: "https://hipokbrand.com/cdn/shop/files/solid-black-zip-hoodie-5562817_1024x.jpg?v=1755874985"
   },
   {
     id: "p4",
@@ -28,7 +28,7 @@ const products = [
     id: "p5",
     name: "Sports Jersey DryFit",
     price: 179000,
-    image: "https://images.unsplash.com/photo-1520975927950-c3caa1f76849?q=80&w=1200&auto=format&fit=crop"
+    image: "https://cdn.shopify.com/s/files/1/1367/5201/files/images-A2A1K_BBBB_ArrivalT_Shirt_Black_0029_1920x.jpg?v=1750083782"
   }
 ];
 
